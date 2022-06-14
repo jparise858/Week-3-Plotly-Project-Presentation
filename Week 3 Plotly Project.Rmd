@@ -1,0 +1,32 @@
+---
+title: "Week 3 Plotly Project 2.0"
+author: "Jason Parise"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## A 3d Scatterplot of Petroleum Rock Sample Measurements 
+
+This data was obtained from the dataset 'rock' in the R Datasets package.
+
+## 3d Plot: Peri vs Shape vs Perm
+
+```{r plotly, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(plotly)
+library(datasets)
+peri <- rock$peri
+shape <- rock$shape
+perm <- rock$perm
+axx <- list(title = "peri")
+axy <- list(title = "shape")
+axz <- list(title = "perm")
+fig <- plot_ly(x = peri, y = shape, z = perm, type = "scatter3d", mode = "markers", color = perm)
+fig <- fig %>% layout(scene = list(xaxis=axx,yaxis=axy,zaxis=axz))
+fig
+```
