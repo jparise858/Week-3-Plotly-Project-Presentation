@@ -3,4 +3,4 @@ Week 3 Plotly Project Presentation
 
 Run this file in RStudio and use 'Run Presentation' mode.
 
-Feel free to review the contents here on Github before running presentation: it is nothing more than a very brief plotly 3d graph.
+Feel free to review the contents here on Github before running presentation: it is nothing more than a very brief plotly 3d graph in presentation mode.
